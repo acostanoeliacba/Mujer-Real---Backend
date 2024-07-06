@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+     <link rel="stylesheet" href="css/contacto.css">
+     <link rel="stylesheet" href="css/index.css">
+     <link rel="icon" href="img/favicon-MR.ico">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+     
+   <title>Contáctanos - Mujer Real</title>   
+</head>
+      
+<body>
+
+  <div class="navbar">
+    <div class="navbar-logo">
+    <img src="img/portada-mujer-real.png" alt="LOGO">
+    </div>
+
+      <div class="navbar-links">
+        <a href="index.html"><b>PRINCIPAL</b></a>
+        <a href="nosotros.html"><b>NOSOTROS</b></a>
+        <a href="servicios.html"><b>SERVICIOS</b></a>
+        <a href="contacto.html"><b>CONTÁCTANOS</b></a>
+        <a href="iniciosesion.html"><b>INICIAR SESIÓN</b></a>
+        <a href="registrarse.html"><b>REGISTRARSE</b></a>
+      </div>
+  </div> 
+
+  <div class="container">
+
+    <h2>Formulario de Contacto</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="name">Nombre y Apellido:</label>
+                <input type="text" id="name" name="name" placeholder="Escribe tu nombre y apellido" required>
+                <small id="nameHelp" class="form-text">Por favor, introduce tu nombre completo.</small>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com" required>
+                <small id="emailHelp" class="form-text">Introduce una dirección de correo válido.</small>
+            </div>
+            <div class="form-group">
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" placeholder="123456789" pattern="[0-9]{9}" required>
+                <small id="phoneHelp" class="form-text">Introduce un número de teléfono de 9 dígitos.</small>
+            </div>
+            <div class="form-group">
+                <label for="subject">Asunto:</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Selecciona...</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="reclamo">Reclamo</option>
+                    <option value="turno">Turno</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <small id="subjectHelp" class="form-text">Selecciona el motivo de tu contacto.</small>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+            </div>
+            <div>
+                <input type="checkbox" id="subscribe" name="subscribe">
+                <label class="textoCheck"for="subscribe">Quiero recibir información diaria de Mujer Real</label> 
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div>
+                <label>¿Cuál es tu servicio de interés?</label>
+                <br>
+                <br>
+                <input type="radio" id="peluqueria" name="service" value="peluqueria" required>
+                <label for="peluqueria">Peluquería</label>
+                <br>
+                <input type="radio" id="manicuria" name="service" value="manicuria">
+                <label for="manicuria">Manicuría</label>
+                <br>
+                <input type="radio" id="maquillaje" name="service" value="maquillaje">
+                <label for="maquillaje">Maquillaje</label>
+            </div>
+            <br>
+            <div class="form-group">
+                <button type="submit"><b>ENVIAR</b></button>
+            </div>
+        </form>
+        <img src="img/portada-mujer-real.png" alt="Portada del logo" class="contact-image">
+    </div>
+
+    <div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var inputs = document.querySelectorAll('input, select, textarea');
+
+            inputs.forEach(function(input) {
+                input.classList.remove('valid', 'invalid'); 
+
+                input.addEventListener('input', function() {
+                    if (this.checkValidity()) {
+                        this.classList.remove('invalid');
+                        this.classList.add('valid');
+                    } else {
+                        this.classList.remove('valid');
+                        this.classList.add('invalid');
+                    }
+
+                    if (!this.value) {
+                        this.classList.remove('valid', 'invalid');
+                    }
+                });
+            });
+        });
+
+        function validateForm() {
+            var inputs = document.querySelectorAll('input, select, textarea');
+            var valid = true;
+
+            inputs.forEach(function(input) {
+                if (!input.checkValidity()) {
+                    valid = false;
+                    input.classList.add('invalid');
+                } else {
+                    input.classList.remove('invalid');
+                    input.classList.add('valid');
+                }
+            });
+
+            if (!valid) {
+                alert('Por favor, completa todos los campos obligatorios correctamente.');
+            }
+
+            return valid;
+        }
+    </script>
+
+    </div>
+
+  <div class="footer">
+ 
+    <h4>SEGUÍNOS EN REDES</h4>
+  
+  <div class="red-social">
+    
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  
+    <div class="small"></div>
+  
+  <small>
+    &copy; 2024 - Mujer Real - Todos los derechos reservados.
+  </small>
+  
+  <a href="#top" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  
+  <script>
+    document.querySelector('.back-to-top').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    console.log('Otro script ejecutándose');
+  </script>
+
+  </div>
+
+  <script src="scripts.js"></script>
+
+</body>
+</html> 

@@ -1,0 +1,120 @@
+body {
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 30%;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input[type="checkbox"],
+.form-group input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: #AB793E;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #AB793E;
+    color: black;
+}
+
+.contact-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.form-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.875em;
+    color: #6c757d;
+    text-align: right;
+}
+
+input.invalid,
+select.invalid,
+textarea.invalid {
+    border-color: red;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+input.valid,
+select.valid,
+textarea.valid {
+    border-color: green;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+.yaTengoCuenta {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 90%;
+    }
+}

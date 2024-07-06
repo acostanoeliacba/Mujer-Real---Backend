@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+    margin:0;
+    padding:0;
+    background-color: #161917;
+}
+
+.titulo-servicios {
+    font-size: 30px;
+}
+
+.navbar {
+    background-color:rgba(7, 7, 7, 0.938);    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-logo img {
+    height: 50px;
+}
+
+.navbar-links {
+    color: #AB793E;
+    padding: 20px 20px 20px 20px;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a {
+    color: #AB793E;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar-links a:hover {
+    background-color: #AB793E;
+    color: #161917;
+}
+
+.galleria-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.galleria-items {
+    width: 300px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    transition: transform 0.3s, z-index 0.3s;
+}
+
+.galleria-items.hovered {
+    transform: scale(1.1);
+    z-index: 10;
+  }
+
+.galleria-items img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
+}
+
+.galleria-items p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.te-esperamos {
+    color: #70160E;
+    font-size: larger;
+}
+
+.footer {
+    padding: 80px 20px 10px;
+    text-align: center;
+    background:black;
+    color: #AB793E ;
+}
+
+.red-social{
+color: #f5f1f1;
+background-color: black;
+position: relative;
+text-align: center;
+padding-bottom: 50px;
+}
+
+.red-social a:hover {
+    color: #AB793E;
+}
+
+.red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    margin-right: 10px;
+    text-align: center;
+    transition: all 300ms ease;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.back-to-top {
+    position: absolute;
+    top: -20px; 
+    right: 20px;
+    background-color: #161917;
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 24px;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+    }
+}

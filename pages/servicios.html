@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/servicios.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="img/favicon-MR.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+   
+<title>Servicios - Mujer Real</title>
+</head>
+<body>
+
+      <div class="navbar">
+      <div class="navbar-logo">
+      <img src="img/portada-mujer-real.png" alt="LOGO">
+      </div>
+  
+        <div class="navbar-links">
+          <a href="index.html"><b>PRINCIPAL</b></a>
+          <a href="nosotros.html"><b>NOSOTROS</b></a>
+          <a href="servicios.html"><b>SERVICIOS</b></a>
+          <a href="contacto.html"><b>CONTÁCTANOS</b></a>
+          <a href="iniciosesion.html"><b>INICIAR SESIÓN</b></a>
+          <a href="registrarse.html"><b>REGISTRARSE</b></a>
+        </div>
+    </div>
+      
+      <div class="main">
+
+        <h1 class="titulo-servicios">Tenemos para ofrecerte...</h1>
+
+        <div class="galleria-servicios">
+          <div class="galleria-items">
+              <img src="img/peluqueria.png" alt="Imagen de peluquería">
+              <h2>Servicio de Peluquería</h2>
+              <p>Desde cortes de cabello y coloración hasta tratamientos capilares especializados.
+              <br>Utilizamos productos de alta calidad para asegurar que tu cabello luzca y se sienta mejor que nunca.
+              <br>Nos encanta innovar y crear estilos personalizados para cada persona.</p>
+          </div>
+          <div class="galleria-items">
+              <img src="img/maquillaje.png" alt="Imagen de maquillaje">
+              <h2>Servicio de Maquillaje</h2>
+              <p>Nuestro equipo de maquilladores profesionales está capacitado para crear looks impresionantes.
+              <br>Ya sea un maquillaje natural para el día, un look glamoroso para una noche especial, o un maquillaje temático para eventos, estamos preparados para hacerlo realidad.</p>
+          </div>
+          <div class="galleria-items">
+              <img src="img/manicuria.png" alt="Imagen de manicuría">
+              <h2>Servicio de Manicuría</h2>
+              <p>Nos tomamos el tiempo para entender tus preferencias y necesidades.
+              <br>Cada tratamiento es adaptado a tus gustos, asegurando que salgas con unas uñas perfectas y saludables.
+              <br>Hacemos diseños artísticos, técnicas de gel y acrílico, y tratamientos de spa para manos.</p>
+          </div>
+        </div>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const items = document.querySelectorAll('.galleria-items');
+        
+          items.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+              item.classList.add('hovered');
+            });
+        
+            item.addEventListener('mouseleave', () => {
+              item.classList.remove('hovered');
+            });
+          });
+        });
+        </script>
+
+        <h2>¡Reserva tu cita hoy!</h2>
+        <p class="datos-contacto">Email: mujer.real@hotmail.com
+        <br>  
+        <br>Dirección: Obispo Trejo 336 B° Centro - Córdoba (Argentina)
+        <br>
+        <br>Teléfono: 3519467356</p>
+        
+        <p class="te-esperamos"><b>¡Te esperamos para brindarte una experiencia inigualable!</b></p>
+        <br>
+      </div>
+
+  <div class="footer">
+   
+    <h4>SEGUÍNOS EN REDES</h4>
+  
+  <div class="red-social">
+    
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  
+    <div class="small"></div>
+  
+  <small>
+    &copy; 2024 - Mujer Real - Todos los derechos reservados.
+  </small>
+  
+  <a href="#top" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  
+  <script>
+    document.querySelector('.back-to-top').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+  </div>
+  
+  </body>
+  </html>
